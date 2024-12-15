@@ -1,0 +1,138 @@
+body {
+    background-color: #75B088;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #3B6E49;
+    padding: 20px;
+    border-bottom: 5px solid #2A4F30;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #FFDEF9;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.search-container {
+    margin-top: 20px;
+}
+
+#search {
+    padding: 10px;
+    width: 300px;
+    font-size: 1rem;
+    border: 2px solid #3B6E49;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#search:focus {
+    border-color: #1A3C28;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.fact {
+    padding: 20px;
+    width: 20%;
+    border: 2px solid #003907;
+    border-radius: 12px;
+    margin: 20px;
+    text-align: center;
+    background-color: #6CA36B;
+    color: #FFDEF9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeIn 0.5s ease-in-out forwards;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.fact:hover {
+    background-color: #4F7A4C;
+    transform: scale(1.05);
+}
+
+.fact p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #1A3C28;
+    transform: translateY(-2px);
+}
+
+#addFactBtn {
+    padding: 10px 20px;
+    background-color: #01360f;
+    border: none;
+    color: #FFDEF9;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addFactBtn:hover {
+    background-color: #2A4F30;
+}
+
+.add-fact-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#newFact {
+    padding: 10px;
+    width: 60%;
+    font-size: 1rem;
+    border: 2px solid #3B6E49;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .fact {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .fact {
+        width: 90%;
+    }
+    #search {
+        width: 80%;
+    }
+    #newFact {
+        width: 80%;
+    }
+}

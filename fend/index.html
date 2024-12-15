@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KittyCat Facts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>KittyCat Facts</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search for a fact..." onkeyup="filterFacts()">
+        </div>
+        <div class="add-fact-container">
+            <input type="text" id="newFact" placeholder="Enter a new fact..." />
+            <button id="addFactBtn" onclick="addNewFact()">Add Catd</button>
+        </div>
+    </header>
+    <main>
+        <div id="facts" class="flex"></div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
